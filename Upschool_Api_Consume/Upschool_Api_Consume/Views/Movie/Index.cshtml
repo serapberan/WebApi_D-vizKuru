@@ -1,0 +1,35 @@
+﻿@model List<MoiveListViewModel>
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<div class="container">
+    <table class="table">
+        <br />
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Film Adı</th>
+                <th scope="col">Puanı</th>
+                <th scope="col">Yapım Yılı</th>
+                <th scope="col">Fragman</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+
+                <tr>
+                    <th scope="row">@item.rank</th>
+                    <td>@item.title</td>
+                    <td>@item.rating</td>
+                    <td>@item.year</td>
+                    <td><a href="#" class="btn btn-outline-dark">Fragman</a></td>
+                    
+                </tr>
+            }
+        </tbody>
+    </table>
+    
+</div>

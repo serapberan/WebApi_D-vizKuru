@@ -1,0 +1,29 @@
+﻿@model IEnumerable<CurrencyListViewModel.Exchange_Rates>
+@{
+    Layout = null;
+}
+
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+               
+                <th scope="col">Döviz Kuru</th>
+                <th scope="col">Değeri</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">@item.currency</th>
+                    <td>@item.exchange_rate_buy</td>
+                 
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
